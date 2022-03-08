@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_quran_yt/constants/constants.dart';
+import 'package:flutter_quran_yt/screens/surah_detail.dart';
 
 import '../models/sajda.dart';
 import '../models/surah.dart';
@@ -65,7 +66,12 @@ class _QuranScreenState extends State<QuranScreen> {
                     return ListView.builder(
                       itemCount: surah!.length,
                       itemBuilder: (context, index) => SurahCustomListTile(surah: surah[index],
-                          context: context, ontap: (){}),
+                          context: context, ontap: (){
+                            setState(() {
+                              Constants.surahIndex = (index + 1);
+                            });
+                            Navigator.pushNamed(context, Surahdetail.id);
+                          }),
                      );
                   }
                   return Center(

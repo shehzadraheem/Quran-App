@@ -7,6 +7,7 @@ import 'package:http/http.dart';
 import '../models/juz.dart';
 import '../models/sajda.dart';
 import '../models/surah.dart';
+import '../models/translation.dart';
 
 class ApiServices{
 
@@ -72,5 +73,12 @@ class ApiServices{
       print("Failed to load");
       throw Exception("Failed  to Load Post");
     }
+  }
+
+  Future<SurahTranslationList> getTranslation(int index) async{
+    final url = "https://quranenc.com/api/translation/sura/urdu_junagarhi/$index";
+    var res = await http.get(Uri.parse(url));
+
+    return SurahTranslationList.fromJson(json.decode(res.body));
   }
 }

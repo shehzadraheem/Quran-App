@@ -3,6 +3,7 @@ import 'package:flutter_quran_yt/constants/constants.dart';
 import 'package:flutter_quran_yt/screens/jus_screen.dart';
 import 'package:flutter_quran_yt/screens/main_screen.dart';
 import 'package:flutter_quran_yt/screens/splash_screen.dart';
+import 'package:flutter_quran_yt/screens/surah_detail.dart';
 import 'package:intl/intl.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -35,6 +36,7 @@ class _MyAppState extends State<MyApp> {
       home: SplashScreen(),
       routes: {
         JuzScreen.id:(context)=>JuzScreen(),
+        Surahdetail.id:(context)=>Surahdetail(),
       },
     );
   }
