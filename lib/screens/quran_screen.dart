@@ -6,6 +6,7 @@ import '../models/surah.dart';
 import '../services/api_services.dart';
 import '../widgets/sajda_custom_tile.dart';
 import '../widgets/surah_custem_tile.dart';
+import 'jus_screen.dart';
 
 class QuranScreen extends StatefulWidget {
   const QuranScreen({Key? key}) : super(key: key);
@@ -96,6 +97,10 @@ class _QuranScreenState extends State<QuranScreen> {
                     itemBuilder: (context,index){
                       return GestureDetector(
                         onTap: (){
+                          setState(() {
+                            Constants.juzIndex = (index + 1);
+                          });
+                          Navigator.pushNamed(context, JuzScreen.id);
                         },
                         child: Card(
                           elevation: 4,

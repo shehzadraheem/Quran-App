@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_quran_yt/constants/constants.dart';
+import 'package:flutter_quran_yt/screens/jus_screen.dart';
 import 'package:flutter_quran_yt/screens/main_screen.dart';
 import 'package:flutter_quran_yt/screens/splash_screen.dart';
 import 'package:intl/intl.dart';
@@ -32,6 +33,9 @@ class _MyAppState extends State<MyApp> {
         fontFamily: 'Poppins'
       ),
       home: SplashScreen(),
+      routes: {
+        JuzScreen.id:(context)=>JuzScreen(),
+      },
     );
   }
 }

@@ -12,7 +12,6 @@ class JuzCustomTile extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(16.0),
       decoration: BoxDecoration(
-        //borderRadius: BorderRadius.circular(32),
           color: Colors.white,
           boxShadow: [
             BoxShadow(
