@@ -75,8 +75,20 @@ class ApiServices{
     }
   }
 
-  Future<SurahTranslationList> getTranslation(int index) async{
-    final url = "https://quranenc.com/api/translation/sura/urdu_junagarhi/$index";
+  Future<SurahTranslationList> getTranslation(int index , int translationIndex) async{
+
+    String lan = "";
+    if(translationIndex == 0){
+      lan = "urdu_junagarhi";
+    }else if(translationIndex == 1){
+      lan = "hindi_omari";
+    }else if(translationIndex == 2){
+      lan = "english_saheeh";
+    }else if(translationIndex == 3){
+      lan = "spanish_garcia";
+    }
+
+    final url = "https://quranenc.com/api/translation/sura/$lan/$index";
     var res = await http.get(Uri.parse(url));
 
     return SurahTranslationList.fromJson(json.decode(res.body));

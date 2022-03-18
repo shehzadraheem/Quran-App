@@ -57,19 +57,26 @@ class TranslationTile extends StatelessWidget {
             Container(
               padding: EdgeInsets.all(8),
               child: Column(
+                mainAxisSize: MainAxisSize.max,
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
 
-                  Text(surahTranslation.arabic_text!,
-                    textAlign: TextAlign.end,
-                    style: TextStyle(
-                        color: Colors.black54,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20),),
-                  Text(
-                    surahTranslation.translation!,
-                    textAlign: TextAlign.end,
-                    style: TextStyle(color: Colors.black, fontSize: 18),
+                  SizedBox(
+                    width: double.infinity,
+                    child: Text(surahTranslation.arabic_text!,
+                      textAlign: TextAlign.end,
+                      style: TextStyle(
+                          color: Colors.black54,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20),),
+                  ),
+                  SizedBox(
+                    width: double.infinity,
+                    child: Text(
+                      surahTranslation.translation!,
+                      textAlign: TextAlign.end,
+                      style: TextStyle(color: Colors.black, fontSize: 18),
+                    ),
                   ),
                 ],
               ),
