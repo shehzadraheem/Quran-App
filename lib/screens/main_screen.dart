@@ -1,7 +1,7 @@
 import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_quran_yt/constants/constants.dart';
-import 'package:flutter_quran_yt/screens/audio_screen.dart';
+import 'package:flutter_quran_yt/screens/qari_screen.dart';
 import 'package:flutter_quran_yt/screens/home_screen.dart';
 import 'package:flutter_quran_yt/screens/prayer_screen.dart';
 import 'package:flutter_quran_yt/screens/quran_screen.dart';
@@ -17,7 +17,7 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
 
    int selectindex = 0;
-   List<Widget> _widgetsList = [HomeScreen(),QuranScreen(),AudioScreen(),PrayerScreen()];
+   List<Widget> _widgetsList = [HomeScreen(),QuranScreen(),QariListScreen(),PrayerScreen()];
 
 
 

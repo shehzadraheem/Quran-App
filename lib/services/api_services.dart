@@ -5,6 +5,7 @@ import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
 
 import '../models/juz.dart';
+import '../models/qari.dart';
 import '../models/sajda.dart';
 import '../models/surah.dart';
 import '../models/translation.dart';
@@ -92,5 +93,21 @@ class ApiServices{
     var res = await http.get(Uri.parse(url));
 
     return SurahTranslationList.fromJson(json.decode(res.body));
+  }
+
+
+  List<Qari> qarilist = [];
+
+  Future<List<Qari>> getQariList() async {
+
+    final url = "https://quranicaudio.com/api/qaris";
+    final res = await http.get(Uri.parse(url));
+
+    jsonDecode(res.body).forEach((element){
+      if(qarilist.length<20) // 20 is not mandatory , you can change it upto 157
+        qarilist.add(Qari.fromjson(element));
+    });
+    qarilist.sort((a,b)=>a.name!.compareTo(b.name!)); // sort according to A B C
+    return qarilist;
   }
 }
