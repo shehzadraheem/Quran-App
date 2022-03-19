@@ -21,14 +21,15 @@ class _AudioSurahScreenState extends State<AudioSurahScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        elevation: 0,
-        title: Text('Surah List',style: TextStyle(color: Colors.black,fontSize: 20,fontWeight: FontWeight.bold),),
-      ),
-      body:  SafeArea(
-        child: FutureBuilder(
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          elevation: 0,
+          title: Text('Surah List',style: TextStyle(color: Colors.black,
+              fontSize: 20,fontWeight: FontWeight.bold),),
+        ),
+        body:  FutureBuilder(
           future: apiServices.getSurah(),
           builder: (BuildContext context,
               AsyncSnapshot<List<Surah>> snapshot) {
@@ -37,7 +38,8 @@ class _AudioSurahScreenState extends State<AudioSurahScreen> {
               return ListView.builder(
                 itemCount: surah!.length,
                 itemBuilder: (context, index) =>
-                    AudioTile(surahName:snapshot.data![index].englishName,
+                    AudioTile(
+                        surahName:snapshot.data![index].englishName,
                         totalAya: snapshot.data![index].numberOfAyahs,
                         number: snapshot.data![index].number,
                         onTap: (){
@@ -46,7 +48,8 @@ class _AudioSurahScreenState extends State<AudioSurahScreen> {
                              qari: widget.qari,
                              index: index+1,
                              list: surah,
-                           )));
+                           )
+                       ));
                         }));
             }
             return Center(

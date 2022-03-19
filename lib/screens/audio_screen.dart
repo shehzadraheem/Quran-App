@@ -428,9 +428,6 @@ class PositionData {
 }
 
 
-
-
-
 class SeekBar extends StatefulWidget {
   final Duration duration;
   final Duration position;
@@ -516,8 +513,6 @@ class _SeekBarState extends State<SeekBar> {
       "${widget.position.inMinutes.remainder(60).toString().padLeft(2, '0')}"
           ":${widget.position.inSeconds.remainder(60).toString().padLeft(2, '0')}";
 }
-
-
 
 
 
