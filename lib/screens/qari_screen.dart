@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../models/qari.dart';
 import '../services/api_services.dart';
 import '../widgets/qari_custom_tile.dart';
+import 'audio_surah_screen.dart';
 
 class QariListScreen extends StatefulWidget {
   const QariListScreen({Key? key}) : super(key: key);
@@ -63,7 +64,12 @@ class _QariListScreenState extends State<QariListScreen> {
                     return ListView.builder(
                       itemCount: snapshot.data!.length,
                       itemBuilder: (context , index){
-                        return QariCustomTile(qari: snapshot.data![index], ontap: (){});
+                        return QariCustomTile(qari: snapshot.data![index],
+                            ontap: (){
+                              Navigator.push(context,
+                                  MaterialPageRoute(builder:(context)=>
+                                      AudioSurahScreen(qari: snapshot.data![index])));
+                            });
                       },
                     );
 

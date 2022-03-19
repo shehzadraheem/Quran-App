@@ -41,6 +41,9 @@ dependencies:
   http: ^0.13.4
   shared_preferences: ^2.0.13
   solid_bottom_sheet: ^0.1.10
+  just_audio: ^0.9.12
+  font_awesome_flutter: any
+  flutter_spinkit: ^5.1.0
 
 
 dev_dependencies:
