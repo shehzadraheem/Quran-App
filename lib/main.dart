@@ -5,7 +5,7 @@ import 'package:flutter_quran_yt/screens/main_screen.dart';
 import 'package:flutter_quran_yt/screens/splash_screen.dart';
 import 'package:flutter_quran_yt/screens/surah_detail.dart';
 import 'package:intl/intl.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+
 
 
 void main() {
