@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_quran_yt/screens/main_screen.dart';
 import 'package:flutter_quran_yt/screens/onboarding_screen.dart';
+import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -25,10 +26,14 @@ class _SplashScreenState extends State<SplashScreen> {
 
     super.initState();
     getData();
-    Timer(Duration(seconds: 3), ()=>Navigator.pushReplacement(context, 
-    MaterialPageRoute(builder: (context){
-      return  alreadyUsed ? MainScreen() : OnBoardingScreen();
-    })));
+    // Timer(Duration(seconds: 3), ()=>Navigator.pushReplacement(context,
+    // MaterialPageRoute(builder: (context){
+    //   return  alreadyUsed ? MainScreen() : OnBoardingScreen();
+    // })
+    // ));
+    Timer(Duration(seconds: 3),(){
+      Get.offNamed("/login");
+    });
   }
 
   @override

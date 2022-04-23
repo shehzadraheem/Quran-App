@@ -25,9 +25,11 @@ class _SurahdetailState extends State<Surahdetail> {
   //SolidController _controller = SolidController();
   Translation? _translation = Translation.urdu;
 
+
   @override
   Widget build(BuildContext context) {
     print(_translation!.index);
+
     return SafeArea(
       child: Scaffold(
         body: FutureBuilder(

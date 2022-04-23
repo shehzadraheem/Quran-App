@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "884487921004",
+    "project_id": "muslimsoul-1c02a",
+    "storage_bucket": "muslimsoul-1c02a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:884487921004:android:9f29c482be4ee3de876749",
+        "android_client_info": {
+          "package_name": "com.example.flutter_quran_yt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "884487921004-rqpcep2t9nbpe94ndsdgfqcj9md6ut6j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiw5pE2r-_BQDTavQxpze2lvc237o6ZbQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "884487921004-rqpcep2t9nbpe94ndsdgfqcj9md6ut6j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
